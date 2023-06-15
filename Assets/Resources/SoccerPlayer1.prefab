@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetObject: {fileID: 4558827374800775287}
+  _cameraObject: {fileID: 4558827374800775287}
   m_IsWalking: 0
   m_WalkSpeed: 20
   m_RunSpeed: 20

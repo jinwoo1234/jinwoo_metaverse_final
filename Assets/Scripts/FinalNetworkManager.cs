@@ -10,7 +10,6 @@ public class FinalNetworkManager : MonoBehaviourPunCallbacks
     public Transform _spawnPoint1;
     public Transform _spawnPoint2;
 
-
     public GameObject _p1Me;
     public GameObject _p2Me;
 

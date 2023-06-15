@@ -11,6 +11,8 @@ public class FinalScoreManager : MonoBehaviourPunCallbacks
     GameObject p1Text;
     GameObject p2Text;
 
+    public GameObject _waitUI;
+
     private int p1Score = 0;
     private int p2Score = 0;
 
@@ -19,6 +21,18 @@ public class FinalScoreManager : MonoBehaviourPunCallbacks
         Debug.Log("scoremanager");
         p1Text = GameObject.Find("p1Score");
         p2Text = GameObject.Find("p2Score");
+    }
+
+    private void Update()
+    {
+        if (PhotonNetwork.PlayerList.Length != 2)
+        {
+            _waitUI.SetActive(true);
+        }
+        else
+        {
+            _waitUI.SetActive(false);
+        }
     }
 
     public void AddScore(bool isLocalPlayer)

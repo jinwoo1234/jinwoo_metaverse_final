@@ -13,7 +13,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviourPunCallbacks
     {
-        public GameObject _targetObject;
+        public GameObject _cameraObject;
+        
         
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
@@ -46,15 +47,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        private GameObject _myChildCapsule;
-        
+
         [PunRPC]
         // Use this for initialization
         private void Start()
         {
             if (photonView.IsMine)
             {
-                _targetObject.SetActive(true);
+                _cameraObject.SetActive(true);
 
                 m_CharacterController = GetComponent<CharacterController>();
                 m_Camera = Camera.main;
@@ -66,7 +66,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jumping = false;
                 m_AudioSource = GetComponent<AudioSource>();
                 m_MouseLook.Init(transform, m_Camera.transform);
-
             }
         }
 
@@ -78,7 +77,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
-            Debug.Log("update");
+
             if (photonView.IsMine)
             {
                 RotateView();
