@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 7388488321004033348}
   - component: {fileID: 6795675631953056343}
   - component: {fileID: 6631009698795438465}
-  - component: {fileID: 8331128517314640222}
+  - component: {fileID: 8718245984116166997}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -234,7 +234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e4aacb7c80dcd9a46998d94696b517aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -270,7 +270,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8331128517314640222
+--- !u!114 &8718245984116166997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,7 +285,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
@@ -306,10 +306,10 @@ GameObject:
   - component: {fileID: 59139850064919118}
   - component: {fileID: 8942164823973718318}
   - component: {fileID: 1111087985590372619}
-  - component: {fileID: 3303308978188777442}
   - component: {fileID: 7835645241636945097}
+  - component: {fileID: 6976849930997253683}
   m_Layer: 0
-  m_Name: SoccerPlayer
+  m_Name: SoccerPlayer1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 4558827374800775287}
+  _targetObject: {fileID: 4558827374800775287}
   m_IsWalking: 0
   m_WalkSpeed: 20
   m_RunSpeed: 20
@@ -601,7 +601,23 @@ CapsuleCollider:
   m_Height: 2.0706558
   m_Direction: 1
   m_Center: {x: 0, y: -0.009600639, z: 0}
---- !u!114 &3303308978188777442
+--- !u!114 &7835645241636945097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517634509972118560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &6976849930997253683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -624,19 +640,3 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7835645241636945097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8517634509972118560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1

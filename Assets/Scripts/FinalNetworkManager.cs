@@ -10,6 +10,7 @@ public class FinalNetworkManager : MonoBehaviourPunCallbacks
     public Transform _spawnPoint1;
     public Transform _spawnPoint2;
 
+
     public GameObject _p1Me;
     public GameObject _p2Me;
 
@@ -61,12 +62,12 @@ public class FinalNetworkManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.PlayerList.Length == 1)
             {
                 _p1Me.SetActive(true);
-                PhotonNetwork.Instantiate("SoccerPlayer", _spawnPoint1.position, Quaternion.LookRotation(_spawnPoint1.forward));
+                PhotonNetwork.Instantiate("SoccerPlayer1", _spawnPoint1.position, Quaternion.LookRotation(_spawnPoint1.forward));
             }
             else
             {
                 _p2Me.SetActive(true);
-                PhotonNetwork.Instantiate("SoccerPlayer", _spawnPoint2.position, Quaternion.LookRotation(_spawnPoint2.forward));
+                PhotonNetwork.Instantiate("SoccerPlayer2", _spawnPoint2.position, Quaternion.LookRotation(_spawnPoint2.forward));
             }
         }
     }
