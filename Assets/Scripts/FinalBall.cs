@@ -19,6 +19,7 @@ public class FinalBall : MonoBehaviourPunCallbacks
         if (other.tag == "p1Goal")
         {
             transform.position = new Vector3(0, 7, 0);
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             _score.AddScore(true);
         }
@@ -27,6 +28,7 @@ public class FinalBall : MonoBehaviourPunCallbacks
         {
             Debug.Log("p2goalTrigger");
             transform.position = new Vector3(0, 7, 0);
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             _score.AddScore(false);
         }
@@ -42,7 +44,8 @@ private void OnCollisionEnter(Collision collision)
             direction.Normalize();
 
             float moveSpeed = 5f;
-            transform.position += direction * moveSpeed * Time.deltaTime;
+
+            GetComponent<Rigidbody>().AddForce(moveSpeed * direction);
         }
 
         if (collision.transform.tag == "Wall")

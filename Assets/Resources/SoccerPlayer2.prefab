@@ -363,7 +363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraObject: {fileID: 4558827374800775287}
-  _waitText: {fileID: 0}
   m_IsWalking: 0
   m_WalkSpeed: 20
   m_RunSpeed: 20
